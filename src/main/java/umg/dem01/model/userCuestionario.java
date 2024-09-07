@@ -52,13 +52,4 @@ public class userCuestionario {
 
 
 
-
-
-
-
-
-
-
-
-
 }

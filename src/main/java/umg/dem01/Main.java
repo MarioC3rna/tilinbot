@@ -2,10 +2,7 @@ package umg.dem01;
 
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import umg.dem01.botTelegram.Bot;
-import umg.dem01.botTelegram.BotRegistra;
-import umg.dem01.botTelegram.botCuestionario;
-import umg.dem01.botTelegram.botPregunton;
+import umg.dem01.botTelegram.*;
 import umg.dem01.model.User;
 import umg.dem01.service.UserService;
 
@@ -155,10 +152,10 @@ public class Main {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
 
              //Crea una instancia de tu bot
-             botCuestionario Botp = new botCuestionario();
+            BotPreguntonDbDinamico Bot = new BotPreguntonDbDinamico();
 
             // Registra tu bot para que empiece a recibir mensajes
-             botsApi.registerBot(Botp);
+             botsApi.registerBot(Bot);
 
             // System.out.println("Funcionando...");
         } catch (Exception ex) {
